@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "GPT-3 Text Creator",
+  "version": "1.0",
+  "description": "An extension that uses GPT-3 to fill text fields.",
+  "permissions": ["activeTab", "webNavigation","scripting","contextMenus","storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons":{
+    "64":"ai_64.png"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
+
